@@ -1,0 +1,14 @@
+
+version: '3.6'
+services:
+
+services:
+
+   cesium:
+      build: ./cesium/  
+      command: node server.js -t input.stream
+      volumes:
+         - ./cesium:/cesium/app
+      working_dir:  /cesium/app
+      ports:
+         - 3334:3334
